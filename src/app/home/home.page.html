@@ -1,7 +1,8 @@
+<div id="body">
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+    DashBoard
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +10,66 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">DashBoard</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+ 
+   <ion-button (click)="logout()">LogOut</ion-button>
+ 
   </div>
+<div id="settings">
+<ion-button color ="danger" (click)="setting()">Setting</ion-button>
+
+</div>
+
+
+
+
+
+
+<section>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+        <ion-fab-button>
+            <ion-icon name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+            <ion-icon name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+            <ion-icon name="logo-instagram"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="information" (click)="toggleModal()"></ion-icon>
+        </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</section>
+
+
+<ion-card id="back" class="ion-padding">
+  <ion-card-content>
+      
+    <strong>Breweries Company<br></strong>
+<div *ngFor="let Company of company;">
+  name: {{Company.name}}
+</div>
+
+
+<div *ngFor="let Company of company;; let i = index;">
+  
+  <div *ngIf="i < 1">
+
+    name: {{Company.name}}
+  </div>
+</div>
+</ion-card-content>
+</ion-card>
+
 </ion-content>
+</div>

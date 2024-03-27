@@ -1,0 +1,30 @@
+
+<ion-content [fullscreen]="true">
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+ 
+<div id="up">
+<ion-card><ion-card-content>
+  <strong>VOLUME UP</strong>
+</ion-card-content>
+</ion-card>
+  <br>
+  <app-slider></app-slider>
+</div>
+<ion-card><ion-card-content>
+  <strong>fullscreen</strong>
+</ion-card-content>
+</ion-card>
+<div id="dark">
+<ion-toggle [(ngModel)]="condition"></ion-toggle>
+</div>
+<div id="back">
+  <ion-button color="danger" (click)="back()">
+    BACK
+ </ion-button>
+</div>
+</ion-content>
