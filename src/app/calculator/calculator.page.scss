@@ -1,0 +1,40 @@
+ion-header {
+    text-align: center;
+}
+
+.container ion-button {
+    width: 100px;
+    margin: 10px 0 0 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+.numbers ion-button{
+font-size: 20px;
+
+}
+
+.numbers i {
+    -webkit-text-stroke: 1px black; 
+    text-stroke: 1px black;
+}
+
+.operation {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.item1 {
+    width: 100px;
+    height: 70px;
+}
